@@ -12,8 +12,8 @@ This project is a simple web service using Spring Boot, which includes both a ba
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/yourusername/springboot-webservice.git
-cd springboot-webservice
+git clone https://github.com/ramdhaniakbar/web-service-java-spring
+cd web-service-java-spring
 ```
 
 ### 2. Build the Project
@@ -44,7 +44,7 @@ java -jar target/springboot-webservice-0.0.1-SNAPSHOT.jar
 
 ### 1. Home Page (Frontend)
 - **URL:** `http://localhost:8080/`
-- **Description:** Serves the `index.html` page from the `templates/` directory.
+- **Description:** Serves the `index.html` page from the `src/main/resources/static/` directory.
 
 ### 2. Student API (JSON Response)
 - **URL:** `http://localhost:8080/api/students`
@@ -63,7 +63,6 @@ src/main/java/com/example/demo/
 ├── Application.java (Main Spring Boot class)
 src/main/resources/
 ├── static/ (CSS, JS, images)
-├── templates/
 │   ├── index.html (Frontend page)
 ├── application.properties (Configuration file)
 ```
