@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student List</title>
+    <script>
+        async function fetchStudents() {
+            try {
+                const response = await fetch("http://localhost:8080/api/students");
+                const data = await response.json();
+                let studentList = document.getElementById("studentList");
+                studentList.innerHTML = "";
+
+                data.forEach(student => {
+                    let li = document.createElement("li");
+                    li.textContent = `${student.name} - ${student.email}`;
+                    studentList.appendChild(li);
+                });
+            } catch (error) {
+                console.error("Error fetching students:", error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Student List</h2>
+    <ul id="studentList"></ul>
+    <button onclick="fetchStudents()">Load Students</button>
+</body>
+</html>
